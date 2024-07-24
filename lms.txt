@@ -1,0 +1,74 @@
+##Database and Table Creation##
+
+1. Database Creation
+    - A new database called 'Library' is created and selected for use with `CREATE DATABASE library;` and `USE library;`.
+
+2. Table Creation
+    - Branch Table: This table stores information about different branches of the library, including branch number, manager ID, branch address, and contact number.
+    - Employee Table: This table stores employee details such as employee ID, name, position, and salary.
+    - Customer Table: This table contains customer details, including customer ID, name, address, and registration date.
+    - IssueStatus Table: This table tracks the books borrowed by customers, including issue ID, customer ID, book name, issue date, and ISBN of the book. It includes foreign keys referencing the customer and books tables.
+    - ReturnStatus Table: This table records the return status of books, including return ID, customer ID, book name, return date, and ISBN of the book. It includes a foreign key referencing the books table.
+    - Books Table: This table stores details about the books, including ISBN, title, category, rental price, availability status, author, and publisher.
+
+ ##Table Alteration##
+- The `IssueStatus` and `ReturnStatus` tables are altered to modify the column lengths of `Issued_book_name`, `Isbn_book`, `Return_book_name`, and `isbn_book2`.
+- The `Books` table is also altered to modify the lengths of `ISBN` and `Book_title`.
+
+### Data Insertion##
+- Branch Table: Data for five branches is inserted.
+- Employee Table: Data for eleven employees is inserted.
+- Customer Table: Data for ten customers is inserted.
+- Books Table: Data for fifteen books is inserted, and the availability status of three books is updated to 'No'.
+- IssueStatus Table: Data for five book borrowings is inserted.
+- ReturnStatus Table: Data for five book returns is inserted.
+
+### Data Retrieval Queries ##
+
+1. Retrieve Available Books
+    - Retrieves book title, category, and rental price of all available books.
+
+2. List Employee Salaries
+    - Lists employee names and their respective salaries in descending order.
+
+3. Books and Borrowing Customers
+    - Retrieves book titles and the corresponding customers who borrowed them.
+
+4. Count of Books by Category
+    - Displays the total count of books in each category.
+
+5. High Salary Employees
+    - Retrieves names and positions of employees with salaries above Rs.50,000.
+
+6. Non-Issuing Customers
+    - Lists customer names who registered before a specific date and have not borrowed any books.
+
+7. Employee Count by Branch
+    - Displays branch numbers and the total count of employees in each branch after adding and updating the `branch_no` column in the employee table.
+
+8. June 2023 Borrowing Customers
+    - Retrieves the names of customers who borrowed books in June 2023.
+
+9. Books Containing 'History'
+    - Retrieves book titles from the book table categorized as 'history'.
+
+10. Branches with More Than Five Employees
+    - Retrieves branch numbers along with the count of employees for branches having more than five employees.
+
+### Advanced Queries
+
+11. Customers with Multiple Borrowings
+    - Retrieves the names and addresses of customers who have borrowed more than one book.
+
+12. Total Rental Price by Customer
+    - Calculates the total rental price of all books borrowed by each customer, listing the customer's name and the total amount.
+
+13. Top 3 Highest Paid Employees
+    - Retrieves the top three highest paid employees along with their branch information.
+
+14. Books Never Borrowed
+    - Lists the titles and authors of books that have never been borrowed.
+
+### Conclusion ##
+- The script effectively sets up a library database with necessary tables and inserts relevant data.
+- It demonstrates various SQL operations such as creating tables, altering tables, inserting data, and performing complex queries to retrieve insightful information from the database.
